@@ -4,7 +4,7 @@
     <h1>Posts</h1>
     @if (count($posts) > 0 )
         @foreach ($posts as $post)
-            <div class="card card-body bg-light">
+            <div class="card card-body bg-light pb-4">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
                         <img src="/storage/cover_images/{{$post->cover_image}}" style="width:100%">
@@ -15,7 +15,11 @@
                     </div>
                 </div>
             </div>
-        @endforeach  
+        @endforeach
+        <div class="pt-3">
+            {{$posts->links()}}
+        </div>
+        
     @else
     <p>No Post Found !</p>     
     @endif

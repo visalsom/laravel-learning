@@ -11,7 +11,6 @@ class Post extends Model
     protected $table ='posts';
     public $primaryKey ='id';
     public $timestamps =true;
-    protected $fillable = ['cover_image'];
     public function user() {
         return $this->belongsTo('App\Models\User');
     }
